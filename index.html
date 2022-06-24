@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>FORMULÁRIO DE RECRUTAMENTO</title>
+  </head>
+  <body>
+    <form method="POST" action="salvar.php">
+      <div class="row">
+        <div class="card">
+          <header><h2>FORMULÁRIO DE RECRUTAMENTO</h2></header>
+          <label class="label-title">SOLO / DUO</label>
+        
+        <div class="card-body">
+          <div class="input-group">
+            <label>Jogador: </label>
+            <input type="text" name="nome" id="" />
+            <input type="text" name="sobrenome" id="" />
+          </div>
+
+          <div class="span-body">
+            <label>Nome</label>
+            <span>Sobrenome</span>
+          </div>
+
+          <div class="input-group">
+            <label>Nick do jogador: </label>
+            <input type="text" name="nick" id="nick" />
+          </div>
+
+          <div class="input-group">
+            <label>ID do jogador: </label>
+            <input style="width: 50px" type="text" name="id" id="input-text" />
+          </div>
+
+          <div class="input-group">
+            <label>Idade do jogador: </label>
+            <input
+              style="width: 50px"
+              type="number"
+              min="0"
+              name="idade"
+              id="input-number"
+            />
+          </div>
+
+          <div class="input-group">
+            <label>Gênero: </label>
+            <select name="genero" id="genero">
+              <option value="0"></option>
+              <option value="1">Masculino</option>
+              <option value="2">Feminino</option>
+              <option value="3">Transgênero</option>
+              <option value="3">Não-binário</option>
+              <option value="3">Prefiro não informar</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Número do Whatsapp: </label>
+            <input
+              type="text"
+              name="telefone"
+              id="telefone"
+              onkeydown="return mascaraTelefone(event)"
+              placeholder="Digite seu telefone"
+            />
+          </div>
+
+          <div class="input-group">
+            <label>Função: </label>
+            <select style="width: 200px" name="funcao" id="funcao">
+              <option value="0"></option>
+              <option value="1">Topo</option>
+              <option value="2">Meio</option>
+              <option value="3">Atirador</option>
+              <option value="4">Selva</option>
+              <option value="5">Suporte</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Possui troca de nick? : </label>
+            <fieldset>
+              <legend>Selecione uma opção:</legend>
+              <div class="input-radio">
+                <div class="item-radio">
+                  <input type="radio" name="troca" id="troca-nick1" value="1" />
+                  <label for="troca-nick1">Sim</label>
+                </div>
+                <div class="item-radio">
+                  <input type="radio" name="troca" id="troca-nick2" value="2" />
+                  <label for="troca-nick2">Não</label>
+                </div>
+                <div class="item-radio">
+                  <input type="radio" name="troca" id="troca-nick3" value="3" />
+                  <label for="troca-nick3">Tenho RP para a troca</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="input-group">
+            <label>Comentários adicionais:</label>
+            <textarea
+              type="text"
+              rows="4"
+              cols="50"
+              name="comentario"
+              id="nick"
+            ></textarea>
+          </div>
+
+          <div class="input-group">
+            <label>Nível de satisfação:</label>
+
+            <a href="javascript:void(0)" onclick="Avaliar(1)">
+              <img src="./img/star0.png" id="s1"
+            /></a>
+
+            <a href="javascript:void(0)" onclick="Avaliar(2)">
+              <img src="./img/star0.png" id="s2"
+            /></a>
+
+            <a href="javascript:void(0)" onclick="Avaliar(3)">
+              <img src="./img/star0.png" id="s3"
+            /></a>
+
+            <a href="javascript:void(0)" onclick="Avaliar(4)">
+              <img src="./img/star0.png" id="s4"
+            /></a>
+
+            <a href="javascript:void(0)" onclick="Avaliar(5)">
+              <img src="./img/star0.png" id="s5"
+            /></a>
+            <input style="width: 10px;" name='avaliacao' id="rating" readonly>
+          </input>
+          </div>
+        </div>
+        <button>
+          Enviar
+        </button>
+      </div>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
